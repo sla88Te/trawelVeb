@@ -1,0 +1,50 @@
+<section class="packages" id="packages">
+
+    <h1 class="heading">
+        <span>W</span>
+        <span>I</span>
+        <span>N</span>
+        <span>T</span>
+        <span>E</span>
+        <span>R</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+    </h1>
+
+    <div class="wintering-banner">
+        <div class="content" data-aos="zoom-in-up" data-aos-delay="300">
+            <span>start your adventure</span>
+            <h3>Let's Enjoy The Winter</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatum praesentium amet quibusdam quam officia suscipit odio.</p>
+        </div>
+    </div>
+
+    <div *ngIf="filtersLoaded | async">
+        <div class="box-container">
+            <ng-container *ngFor="let destinations of des">
+                <div class="box" *ngIf="destinations.type === 'wintering'">
+                            <img src="assets/images/{{ destinations.destinations }}.jpg" alt="">
+                        <div class="content">
+                            <h3 #city> <i class="fas fa-map-marker-alt"></i>{{ destinations.destinations }}</h3>
+                            <p>{{ destinations.description }}</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="price">{{ destinations.price }} <span>$120.00</span></div>
+                            <a *ngIf="isLoogedIn" [routerLink]="['/destinations/', destinations._id]" class="btn" routerLinkActive="is-active">book now</a>
+                            <a *ngIf="notLoggedIn" [routerLink]="['/user/login']" class="btn" routerLinkActive="is-active">login</a>
+                        </div>
+                    </div>
+            </ng-container>
+            
+        </div>
+    </div>
+
+
+
+</section>

@@ -1,0 +1,56 @@
+
+<section class="book" id="book">
+        
+    <h1 class="heading">
+        <span>r</span>
+        <span>e</span>
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>a</span>
+        <span>t</span>
+        <span>i</span>
+        <span>o</span>
+        <span>n</span>
+    </h1>
+  
+    <div class="row" *ngIf="bookings.length > 0">
+      <div class="box-container" *ngFor="let booking of bookings"> 
+        <div class="box" >
+            <img src="assets/images/{{booking.destination}}.jpg" alt="">
+            <div class="content">
+                <h3 > {{ booking.destination }} </h3>
+                <p>start date: {{ booking.startDate }}</p>
+                <p>end date: {{ booking.endDate }}</p>
+                <p>name of  guest: {{ booking.name }}</p>
+                <p>last name of guest: {{ booking.lastName }}</p>
+                <p>guest phone: {{ booking.phoneNumber }}</p>
+                <p>guest email: {{ booking.email }}</p>
+                <p>number od guest: {{ booking.numberOfGuests }}</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> {{ price }}  <span>$120.00</span></div>
+                <button (click)="deleteBooking(booking._id)"><input type="submit" class="btn" value="remove reservation" ></button>
+            </div>
+        </div>
+        
+      </div>
+        
+        
+    </div>
+  
+    
+    
+  </section>
+
+
+
+
+
+

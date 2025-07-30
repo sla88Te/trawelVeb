@@ -1,0 +1,15 @@
+<section>
+    <div class="login-form-container">
+
+        <i class="fas fa-times" id="form-close" ></i>
+    
+        <form action="">
+            <h3>new destination</h3>
+            <input #destinationInput type="destination" class="box"  placeholder="destination">
+            <input #typeInput type="type" class="box"  placeholder="type">
+            <input #descriptionInput type="textarea" rows="3"  class="box"  placeholder="Short Description">
+            <input #priceInput type="text" class="box"  placeholder="price">
+            <input type="submit" class="btn"  value="submit" (click)="createDestination(destinationInput.value, typeInput.value, priceInput.value, descriptionInput.value)"> 
+        </form>
+    </div>
+</section>

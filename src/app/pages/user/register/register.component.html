@@ -1,0 +1,16 @@
+<section>
+    <div class="login-form-container">
+
+        <i class="fas fa-times" id="form-close" ></i>
+    
+        <form action="">
+            <h3>register</h3>
+            <input #emailInput type="email" class="box" id="loginFormEmail" placeholder="enter your email">
+            <input #pwInput type="password" class="box" id="loginFormPassword" placeholder="enter your password">
+            <input #nameInput type="name" class="box" id="first name" placeholder="enter your name">
+            <input #lastNameInput type="lastName" class="box" id="loginFormlastName" placeholder="enter your last name">
+            <input #phoneInput type="phone" class="box" id="loginFormphone" placeholder="enter your phone">
+            <input type="submit" class="btn" id="login" value="register" (click)="onSignupButtonClicked(emailInput.value, pwInput.value, nameInput.value, lastNameInput.value, phoneInput.value)" [routerLink]="['/']">
+        </form>
+    </div>
+</section>

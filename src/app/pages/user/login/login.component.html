@@ -1,0 +1,17 @@
+<section>
+    <div class="login-form-container">
+
+        <i class="fas fa-times" id="form-close" ></i>
+    
+        <form action="">
+            <h3>login</h3>
+            <input #emailInput type="email" class="box" id="loginFormEmail" placeholder="enter your email">
+            <input #pwInput type="password" class="box" id="loginFormPassword" placeholder="enter your password">
+            <button type="button" class="btn" id="login" value="login now" (click)="onLoginButtonClicked(emailInput.value, pwInput.value)" [routerLink]="['/']">Login</button>
+            <input type="checkbox" id="remember">
+            <label for="remember">remember me</label>
+            <p>forgot your password? <a href="#">click here</a></p>
+            <p>dont have account? <a href="user/register">register now</a></p>
+        </form>
+    </div>
+</section>
